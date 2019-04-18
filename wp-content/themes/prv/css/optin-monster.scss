@@ -1,0 +1,99 @@
+//Optin Monster styles
+.v65-widgetFormWrapper {
+	width: 100% !important;
+}
+
+.v65-widgetForm { 
+	margin-bottom: 1em; 
+	width: 100% !important; 
+
+	legend { 
+		display: none; 
+	}
+
+	fieldset { 
+		width: 100%; 
+
+		div { 
+			overflow: hidden; 
+			padding: 10px 5px !important; 
+			width: 100%; 
+		}
+	}
+
+	label { 
+		display: block; 
+	}
+
+	label.submitLabel { 
+		font-size: 4px; 
+		line-height: 4px; 
+	}
+
+	.formErrorMessage { 
+		font-style: italic; 
+		font-weight: normal; 
+		color: #C66; 
+	}
+
+	input[type=text], input[type=password]	{ 
+		padding: 0; 
+		margin: 0; 
+		width: 100%; 
+	}
+
+	textarea, select { 
+		line-height: 1.5; 
+		width: 225px; 
+		font-size: 1em; 
+	}
+
+	button {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+}
+
+
+.error { color: #CC0000; }
+
+/* clearing */
+.group:before,.group:after { content:""; display:table; }
+.group:after { clear:both; }
+.group { zoom:1; /* For IE 6/7 (trigger hasLayout) */ }
+
+
+.Campaign__content {
+
+	h1,h2,h3,h4,h5,h6 {
+		color: #97452d;
+    	font-weight: normal;
+		font-size: 2em;
+		//font-family: "cinzelregular",Georgia,serif;
+		letter-spacing: 3px;
+		line-height: 1;
+		margin: 1em 0;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	p {
+		font-size: 1em;
+		//font-family: "crimson_textroman",Georgia,serif;
+		line-height: 1.6;
+		margin: 0 auto 10px;
+		max-width: auto;
+		-webkit-font-smoothing: antialiased;
+	}
+} 
+
+.Campaign__innerWrapper {
+	 & > button {
+	 	top: 15px !important;
+    	right: 15px !important;
+    	font-size: 12px;
+    	line-height: 1;
+	 }
+}
+
