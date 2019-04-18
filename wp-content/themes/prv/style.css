@@ -1,0 +1,3759 @@
+/*
+Theme Name: Pine Ridge Vineyards
+Theme URI: http://www.pineridgevineyards.com
+Author: Angelsmith
+Author URI: http://www.angelsmith.net
+Description: Custom theme for PRV created by Angelsmith
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: blank_template
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+blank_template is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Fonts
+# Normalize
+# Typography
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+#Responsive
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+/* @font-face {
+   font-family: "Gotham";
+   font-weight: 400;
+   font-style:  normal;
+}*/
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat');*/
+/*-------------------------------------------------------------*/
+::-webkit-scrollbar {
+	/*width: 0.4em;  */
+}
+
+::-webkit-scrollbar-track {
+	/*background:transparent;*/
+}
+
+::-webkit-scrollbar-thumb {
+	/*background: #fff;*/
+}
+
+
+html {
+	height: 100% !important;
+	box-sizing: border-box !important;
+	font-family: serif;
+	/*background-color: #414141;*/
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit !important;
+}
+
+body {
+	/*height: 100%!important;*/
+	margin: 0;
+	overflow-x: hidden;
+	position: relative !important;
+	margin: 0 !important;
+	/*padding-bottom: 6rem!important;*/
+	min-height: 100% !important;
+	background-color: #414141;
+}
+
+#content,
+#masthead,
+#footer-content {
+	max-width: 1366px;
+	margin: auto;
+}
+
+/*#main{
+	background-image: url(https://prv.wpengine.com/wp-content/uploads/2017/04/visit-us-hero.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}*/
+
+/*--------------------------------------------------------------
+## Typography
+--------------------------------------------------------------*/
+
+body {
+	font-family: "Gotham A", "Gotham B", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	color: #404040;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+	font-family: "Gotham A", "Gotham B", sans-serif;
+	font-style: normal;
+	font-weight: 500 !important;
+	letter-spacing: 3px;
+}
+
+p,
+li {
+	font-family: "adobe-caslon-pro", serif;
+	font-size: 18px !important;
+	letter-spacing: 1px;
+	line-height: 1.8;
+	/*font-family: serif;*/
+}
+
+ul {
+	padding-left: 0 !important;
+	list-style: none;
+}
+
+.width-1366 {
+	max-width: 1366px !important;
+	margin: 0 auto !important;
+}
+
+/*a{
+	color:#a15e27;
+}*/
+.font-Cap-small {
+	font-variant: small-caps !important;
+	font-size: 14px !important;
+}
+
+button,
+button.vc_general,
+a.vc_general,
+a.vc_general {
+	height: auto;
+	background: transparent !important;
+	color: #fff !important;
+	text-transform: uppercase !important;
+	border: 1px solid #fff !important;
+	border-radius: 0 !important;
+	transition: .5s !important;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+}
+
+button:hover,
+button.vc_general:hover,
+.vc_general:hover {
+	background: #d5d0ca !important;
+	color: #403f3d !important;
+}
+
+.white button,
+.white button.vc_general,
+.white a.vc_general,
+.white a.vc_general {
+	height: auto;
+	background: transparent !important;
+	color: #fff !important;
+	text-transform: uppercase !important;
+	border: 1px solid #fff !important;
+	border-radius: 0 !important;
+	transition: .5s !important;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+}
+
+.white button:hover,
+.white button.vc_general:hover,
+.white .vc_general:hover {
+	background: #d5d0ca !important;
+	color: #403f3d !important;
+}
+
+.dark-grey button,
+.dark-grey button.vc_general,
+.dark-grey a.vc_general,
+.dark-grey a.vc_general,
+.tribe-events-button,
+.linkAltBtn,
+.largeLinkBtn,
+.modalLinkAltBtn.v65-cartRemoveButton,
+.largeBtn,
+.linkBtn,
+.defaultBtn,
+.gform_footer.top_label>input.gform_button,
+#location_search_submit_field {
+	background: transparent !important;
+	color: #403f3d !important;
+	text-transform: uppercase !important;
+	border: 1px solid #403f3d !important;
+	border-radius: 0 !important;
+	transition: .5s !important;
+	font-family: "Gotham A", "Gotham B", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+}
+
+.dark-grey button:hover,
+.dark-grey button.vc_general:hover,
+.dark-grey .vc_general:hover,
+.tribe-events-button:hover,
+.linkAltBtn:hover,
+.largeLinkBtn:hover,
+.modalLinkAltBtn.v65-cartRemoveButton:hover,
+.largeBtn:hover,
+.linkBtn:hover,
+.defaultBtn:hover,
+.gform_footer.top_label>input.gform_button:hover,
+#location_search_submit_field:hover {
+	background: #403f3d !important;
+	color: #fff !important;
+}
+
+.white p,
+.white a,
+.white a:hover,
+.white h1,
+.white h2,
+.white h3,
+.white h4,
+.white h5,
+.white h6,
+.white li,
+.white button.vc_general.vc_btn3 {
+	color: #fff;
+}
+
+.shadow p,
+.shadow a,
+.shadow h1,
+.shadow h2,
+.shadow h3,
+.shadow h4,
+.shadow h5,
+.shadow h6 {
+	text-shadow: 0 0 10px #000;
+}
+
+.dark-grey p,
+.dark-grey h1,
+.dark-grey h2,
+.dark-grey h3,
+.dark-grey h4,
+.dark-grey h5,
+.dark-grey h6,
+.dark-grey a {
+	color: #403f3d !important;
+}
+
+.glow p,
+.glow a,
+.glow h1,
+.glow h2,
+.glow h3,
+.glow h4,
+.glow h5,
+.glow h6 {
+	text-shadow: 0 0 10px #fff;
+}
+
+/*.text-bold, .text-bold h1, .text-bold h2, .text-bold h3, .text-bold h4, .text-bold h5, .text-bold h6, .text-bold p, .text-bold a{
+	font-weight: 700!important;
+}*/
+.text-10,
+.text-10 h1,
+.text-10 h2,
+.text-10 h3,
+.text-10 h4,
+.text-10 h5,
+.text-10 h6,
+.text-10 p,
+.text-10 a,
+div.search-bar-title h3.text-10 {
+	font-size: 10px !important;
+}
+
+.text-12,
+.text-12 h1,
+.text-12 h2,
+.text-12 h3,
+.text-12 h4,
+.text-12 h5,
+.text-12 h6,
+.text-12 p,
+.text-12 a {
+	font-size: 12px !important;
+}
+
+.text-14,
+.text-14 h1,
+.text-14 h2,
+.text-14 h3,
+.text-14 h4,
+.text-14 h5,
+.text-14 h6,
+.text-14 p,
+.text-14 a {
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+.text-16,
+.text-16 h1,
+.text-16 h2,
+.text-16 h3,
+.text-16 h4,
+.text-16 h5,
+.text-16 h6,
+.text-16 p,
+.text-16 a {
+	font-size: 16px !important;
+}
+
+.text-18,
+.text-18 h1,
+.text-18 h2,
+.text-18 h3,
+.text-18 h4,
+.text-18 h5,
+.text-18 h6,
+.text-18 p,
+.text-18 a {
+	font-size: 18px;
+}
+
+.text-19,
+.text-19 h1,
+.text-19 h2,
+.text-19 h3,
+.text-19 h4,
+.text-19 h5,
+.text-19 h6,
+.text-19 p,
+.text-19 a {
+	font-size: 19px;
+}
+
+.text-20,
+.text-20 h1,
+.text-20 h2,
+.text-20 h3,
+.text-20 h4,
+.text-20 h5,
+.text-20 h6,
+.text-20 p,
+.text-20 a {
+	font-size: 20px;
+}
+
+.text-22,
+.text-22 h1,
+.text-22 h2,
+.text-22 h3,
+.text-22 h4,
+.text-22 h5,
+.text-22 h6,
+.text-22 p,
+.text-22 a {
+	font-size: 22px !important;
+}
+
+.text-24,
+.text-24 h1,
+.text-24 h2,
+.text-24 h3,
+.text-24 h4,
+.text-24 h5,
+.text-24 h6,
+.text-24 p,
+.text-24 a {
+	font-size: 24px;
+}
+
+.margin-bottom-zero {
+	margin-bottom: 0 !important;
+}
+
+.font-gotham {
+	font-family: "Gotham A", "Gotham B", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+	color: #a15e27;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #a15e27;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+a:visited {
+	color: inherit !important;
+}
+
+/*div.white > a.vc_general.vc-btn3{
+
+}*/
+/*--------------------------------------------------------------
+## Branding
+----------------------------------------------------------------*/
+
+.site-branding p {
+	font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.mobile-only {
+	display: none !important;
+}
+
+#utility-navigation,
+#main-navigation,
+.content-box,
+.templetra-footer {
+	max-width: 1366px;
+	margin: 0 !important;
+}
+
+.loginWidget,
+.modalCart,
+.subscribe {
+	display: inline-block;
+}
+
+.fa.fa-shopping-cart {
+	font-size: 14px !important
+}
+
+.carousel-inner {
+	max-width: 1366px;
+	margin: 0 auto !important;
+}
+
+#mega-container {
+	top: 0;
+	z-index: 10000;
+	/*width:100vw;*/
+	/*margin-left:-7.5px!important;*/
+	position: fixed !important;
+	/*left:0!important;*/
+	box-sizing: border-box !important;
+	width: 100% !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	margin: 0 auto !important;
+}
+
+.main-logo-img {
+	margin-top: 1.5%;
+	margin-left: 5%;
+}
+
+.toggle-bar-row {
+	display: none !important;
+}
+
+div#mega-visit-us,
+div#mega-event,
+div#mega-wines,
+div#mega-shop,
+div#mega-membership,
+div#mega-vineyard-kitchen,
+div#mega-our-story,
+div#mega-estate-vineyard,
+div#mega-our-team {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 1));
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 1));
+	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 1));
+	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 1));
+	/* For Firefox 3.6 to 15 */
+	padding-right: 0 !important;
+	margin: 0;
+	max-width: 1366px;
+}
+
+div#mega-visit-us a {
+	color: #9e5f2c !important;
+}
+
+div#mega-visit-us a,
+div#mega-event a,
+div#mega-wines a,
+div#mega-shop a,
+div#mega-membership a,
+div#mega-vineyard-kitchen a,
+div#mega-our-story a,
+div#mega-estate-vineyard a,
+div#mega-our-team a {
+
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+}
+
+div#mega-visit-us p,
+div#mega-event p,
+div#mega-wines p,
+div#mega-shop p,
+div#mega-membership p,
+div#mega-vineyard-kitchen p,
+div#mega-our-story p,
+div#mega-estate-vineyard p,
+div#mega-our-team p {
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+}
+
+div#mega-visit-us h4,
+div#mega-event h4,
+div#mega-wines h4,
+div#mega-shop h4,
+div#mega-membership h4,
+div#mega-vineyard-kitchen h4,
+div#mega-our-story h4,
+div#mega-estate-vineyard h4,
+div#mega-our-team h4 {
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 700 !important;
+	font-size: 12px !important;
+}
+
+div#mega-visit-us ul,
+div#mega-event ul,
+div#mega-wines ul,
+div#mega-shop ul,
+div#mega-membership ul,
+div#mega-vineyard-kitchen ul,
+div#mega-our-story ul,
+div#mega-estate-vineyard ul,
+div#mega-our-team ul {
+	list-style: none !important;
+}
+
+#main-navigation {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1));
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1));
+	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1));
+	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1));
+	/* For Firefox 3.6 to 15 */
+	height: 70px;
+	-webkit-align-items: center;
+}
+
+
+#main-navigation p,
+.wrapped-mega p {
+	font-family: 'GothamBook', sans-serif !important;
+	font-size: 14px !important;
+}
+
+#main-navigation>div>div>div {
+	/*CENTER NAV VERTICALLY*/
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+}
+
+.wpb_content_element.nav-level-1 {
+	margin-bottom: 0;
+	width: 100%;
+}
+
+.vc_row.vc_row-flex.nav-level-2 {
+	display: none;
+	/*box-shadow:0 5px 20px rgba(0,0,0,0.5)*/
+}
+
+#main-navigation a,
+#main-navigation a:visited,
+#main-navigation a:active,
+#vin65-remote-tools,
+#vin65-remote-tools a,
+#vin65-remote-tools div {
+	color: #6c6b69;
+	font-size: 10px;
+	font-weight: 100;
+	letter-spacing: 0.1em;
+	line-height: 1em;
+	text-transform: uppercase;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+}
+
+.first-column {
+	margin-top: 1.5%;
+	margin-left: 6%;
+	width: 21% !important;
+}
+
+.second-column,
+.third-column {
+	width: 21% !important;
+	margin-top: 1.5%;
+}
+
+.third-column .wpb_wrapper ul {
+	padding-left: 0 !important;
+}
+
+.fourth-column {
+	width: 31% !important;
+}
+
+#mega-membership .fourth-column {
+	width: 26.004% !important;
+}
+
+.line-height-column ul li {
+	/*width: 31%!important;*/
+	line-height: 1.2;
+	margin-bottom: 12px !important;
+
+}
+
+.fourth-column>.vc_column-inner {
+	background-size: cover;
+}
+
+.hidden-div {
+	display: none !important;
+}
+
+.toggle-bar-row .wpb_wrapper {
+	/*width:20%;*/
+	margin: auto;
+}
+
+.toggle-bar {
+	color: #403f3d;
+	display: none;
+}
+
+.col-7 .inner-row-footer>.vc_column-inner {
+	padding: 0;
+}
+
+.col-7 .bg-img {
+	width: 14.286% !important;
+}
+
+.col-8 .inner-row-footer>.vc_column-inner {
+	padding: 0;
+}
+
+.col-8 .bg-img {
+	width: 12.5% !important;
+}
+
+.bg-img.our-story {
+	width: 20%;
+}
+
+/* IE 10 and IE 11 */
+.hide-on-mobile-nav>div.upb_row_bg.vcpb-vz-jquery {
+	max-width: 1366px !important;
+	min-width: 0 !important;
+	margin: 0 auto;
+	height: 120vh;
+}
+
+/*--------------------------------------------------------------
+## VIN65 Remote Tools
+--------------------------------------------------------------*/
+.logged-in {
+	display: block;
+}
+
+.not-logged-in {
+	display: none;
+}
+
+#utility-navigation {
+	z-index: 11000;
+	/*background-color: #c1b6b4!important;*/
+	/*background-color: transparent;*/
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
+	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
+	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
+	/* For Firefox 3.6 to 15 */
+	height: 35px;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.white button.shop-modal {
+	border: none !important;
+	background: transparent !important;
+	font-family: 'adobe-caslon-pro', serif;
+	font-style: italic;
+	font-size: 20px !important;
+	text-transform: capitalize !important;
+}
+
+.white button.shop-modal:hover {
+	background: transparent !important;
+	text-decoration: underline !important;
+	color: #fff !important;
+}
+
+.subscribe {
+
+	margin: auto 0;
+	padding-left: 5px
+}
+
+.subscribe a {
+	padding-left: 5px;
+	color: #C65863 !important;
+}
+
+.modalCart {
+	padding-right: 10px;
+	border-right: 1px solid #414141;
+}
+
+#vin65-remote-tools {
+	margin-bottom: 0;
+	margin-right: 13%;
+}
+
+#vin65-remote-tools>.wpb_wrapper,
+.loginWidget {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-end;
+	-webkit-justify-content: flex-end;
+}
+
+#v65-searchWidgetInput input {
+	width: 100%;
+}
+
+#v65-searchWidgetButton {
+	display: inline-block;
+}
+
+.v65-widgetLogin-yourAccount {
+	display: none;
+}
+
+.v65-widgetModalCart-itemSummary {
+	margin: 20px 0;
+}
+
+.v65-widgetModalCart-itemSummary .group {
+	display: flex;
+	display: -webkit-flex;
+	border-bottom: 1px dotted #414141;
+	margin-bottom: 5px;
+}
+
+.v65-widgetModalCart-itemSummary .group div {
+	padding: 3px 10px;
+}
+
+.loginWidget {
+	padding-top: 0;
+	padding-right: 10px;
+	width: 100%;
+}
+
+#utility-navigation .loginWidget {
+	width: auto;
+}
+
+.v65-widgetLogin-logout,
+.v65-widgetLogin-login {
+	padding-top: 3px;
+	padding-left: 10px;
+}
+
+.v65-widgetLogin-editProfile {
+	width: auto;
+	text-align: right;
+	padding-right: 10px;
+	border-right: 1px solid #414141;
+	padding-top: 3px;
+}
+
+.v65-widgetModalCart-status {
+	padding-left: 10px;
+	border-left: 1px solid #414141;
+}
+
+.v65-widgetModalCart-status,
+.v65-widgetModalCart-status a {
+	font-size: 16px !important;
+}
+
+.v65-widgetModalCart-dropdown {
+	position: absolute;
+	right: 10px;
+	background: #fff;
+	padding: 10px;
+	display: none;
+}
+
+.v65-widgetModalCart-closeButton a,
+.v65-widgetModalCart-viewCartButton a {
+	display: inline-block;
+	padding: 2px 5px;
+	border: 1px solid #fff;
+	margin-bottom: 5px;
+}
+
+.v65-widgetModalCart-closeButton a,
+.v65-widgetModalCart-viewCartButton a,
+.v65-widgetModalCart-checkOutButton a span {
+	background: transparent !important;
+	color: #403f3d !important;
+	text-transform: uppercase !important;
+	border: 1px solid #403f3d !important;
+	border-radius: 0 !important;
+	transition: .5s !important;
+	font-family: "Gotham A", "Gotham B", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+}
+
+.v65-widgetModalCart-closeButton a:hover,
+.v65-widgetModalCart-viewCartButton a:hover,
+.v65-widgetModalCart-checkOutButton a span:hover {
+	background: #403f3d !important;
+	color: #fff !important;
+}
+
+.v65-widgetModalCart-itemSummaryDescription {
+	width: 100%;
+}
+
+.v65-widgetModalCart-BottomButtons {
+	text-align: right;
+}
+
+.v65-widgetModalCart-viewCartButton,
+.v65-widgetModalCart-checkOutButton {
+	display: inline-block;
+}
+
+.v65-widgetModalCart-status a {
+	font-size: 10px !important;
+}
+
+#v65-PagingTop,
+.v65-product-addToCart-unitDescription {
+	display: none !important;
+}
+
+#v65-PagingBottom {
+	height: 40px;
+	display: inline-block;
+	width: 100%;
+	margin: 0 !important;
+}
+
+.v65-product-pagination>ul>li>a {
+	height: 35px !important;
+}
+
+
+/*--------------------------------------------------------------
+## FOOTER
+--------------------------------------------------------------*/
+#main-footer {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+.fa-icon i.fa {
+	padding: 0 5px;
+	font-size: 25px;
+	color: #6c6b69;
+}
+
+.inner-row-footer>.vc_column-inner {
+	padding-top: 0 !important;
+}
+
+.hidden-footer {
+	display: none !important;
+}
+
+.footer-logo {
+	margin-left: 0% !important;
+}
+
+.copy-right-row {
+	display: inline-block;
+	width: 100%;
+	/* float: right; */
+	margin: 0 auto !important;
+	background: #414141;
+}
+
+.copy-right-row .inner-copy-right {
+	/*width: 32%;*/
+	text-align: right;
+}
+
+.copy-right-row .vc_column-inner {
+	padding: 10px !important;
+}
+
+.copy-right-row .vc_column-inner .wpb_wrapper .wpb_text_column {
+	margin-bottom: 0 !important;
+}
+
+.copy-right p {
+	color: #bdb7b3;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+}
+
+.copy-right p small {
+	font-size: 50%;
+}
+
+ul.footer-links {
+	text-align: center;
+}
+
+ul.footer-links li a,
+ul.footer-links li a:visited,
+ul.footer-links li a:active {
+	font-size: 12px;
+	color: #bdb7b3 !important;
+}
+
+ul.footer-links li {
+	display: inline-block;
+	margin: 0 10px;
+	width: 22%;
+}
+
+/*.footer-social{
+	display: inline-block;
+	width:8%!important;
+}*/
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/*.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0;
+}*/
+
+/*hero-row {
+    padding-top: 105px!important;
+}*/
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	/*margin: 1.5em 0 0;*/
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.orange a {
+	color: #a15e27 !important;
+}
+
+.orange-hover h4 a:hover {
+	color: #a15e27 !important;
+}
+
+.bg-top .vc_column-inner {
+	background-position: top !important;
+}
+
+/*.bg-img .vc_column-inner{
+  margin: 0;
+  -webkit-transition: all 8s;
+  transition: all 8s;
+
+}
+.bg-img:hover .vc_column-inner {
+   -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	z-index: 0;
+}*/
+.bg-img .vc_column-inner {
+	margin: 0;
+	-webkit-transition: all 11s;
+	transition: all 11s;
+	background-size: 110%;
+	max-height: 220px;
+}
+
+.bg-img:hover .vc_column-inner {
+
+	background-size: 150%;
+}
+
+.bg-img.wine-bottle .vc_column-inner {
+	margin: 0;
+	-webkit-transition: all 6s;
+	transition: all 6s;
+	background-size: 150%;
+	background-position: bottom left !important;
+}
+
+.bg-img.wine-bottle:hover .vc_column-inner {
+
+	background-size: 180%;
+}
+
+.bg-img:hover .vc_column-inner>.wpb_wrapper:hover {
+	transform: scale(1, 1);
+	z-index: 99999;
+}
+
+.bg-img.wpb_column.vc_column_container.vc_col-sm-6.vc_col-has-fill {
+	/*border: 10px solid #ddd;*/
+	height: 420px;
+}
+
+.vineyard-box .bg-img.wpb_column.vc_column_container.vc_col-sm-2.vc_col-has-fill {
+	width: 20%;
+	/*border: 10px solid #ddd;*/
+}
+
+/*.hero-row .upb_row_bg{transition: all 1s;}*/
+
+/*.hero-row .upb_row_bg:hover{transform:scale(1.2);}*/
+.margin-auto {
+	margin: auto;
+}
+
+.margin-psd {
+	margin-top: 14em;
+	margin-left: 10%;
+	width: 40%;
+}
+
+.right-corner-margin-psd {
+	margin-top: 5%;
+	margin-left: 55%;
+	margin-right: 5%;
+}
+
+.margin-psd h4 {
+	font-size: 24px;
+	margin-bottom: 21px;
+}
+
+.dark-grey h4 {
+	font-size: 20px;
+}
+
+.flexslider {
+	margin-bottom: 0 !important;
+	border: none !important;
+}
+
+.carousel-img {
+	margin-bottom: 0 !important
+}
+
+.carousel-inner .vc_column-inner {
+	padding: 0 !important;
+}
+
+.flex-control-paging li a.flex-active {
+	background: #fff !important;
+	background: rgba(255, 255, 255, .9) !important;
+	cursor: default;
+}
+
+.flex-control-paging li a {
+	background: rgba(255, 255, 255, .5) !important;
+}
+
+.wpb_gallery .wpb_flexslider .flex-control-nav {
+	bottom: auto !important;
+	top: 94% !important;
+	right: 90% !important;
+	margin-top: 15px !important;
+	display: inline-block !important;
+	width: 10% !important;
+}
+
+.flex-direction-nav>li>a {
+	/*display: none!important;*/
+	color: #fff !important;
+}
+
+a.anchor-accordion {
+	color: inherit;
+}
+
+#member-comparison {
+	border: 10px solid #ddd;
+}
+
+.appellation-society {
+	background-color: #e8e7e3;
+	padding: 30px 0;
+}
+
+.collector-club {
+	background-color: #414141;
+	padding: 30px 4px;
+}
+
+.collector-club-row {
+	margin: 0 !important;
+}
+
+.membership-column {
+	background-color: #e8e7e3;
+	margin: 0 5px;
+	width: 32% !important;
+}
+
+.membership-column-dark {
+	background-color: #414141;
+}
+
+div.vc_tta-tabs-container {
+	margin: 0 !important;
+}
+
+ul.vc_tta-tabs-list {
+	display: flex !important;
+	display: -webkit-flex !important;
+	/*flex-wrap: wrap;*/
+}
+
+span.vc_tta-title-text {
+	text-transform: uppercase;
+	font-family: "Gotham A", "Gotham B", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+
+li.vc_tta-tab {
+	width: 50% !important;
+	background-color: #d4d0c9;
+	text-align: center;
+}
+
+li.vc_tta-tab.vc_active {
+	background-color: #fff;
+}
+
+li.vc_tta-tab a {
+	width: 102% !important;
+}
+
+.recipes .entry-header .entry-title {
+	display: none !important;
+}
+
+.upcoming-title {
+	background: #d4d0c9 !important;
+}
+
+.upcoming-feed {
+	background: #fff !important;
+}
+
+.upcoming-feed>.wpb_column>.vc_column-inner {
+	padding-top: 0 !important;
+}
+
+.upcoming-feed>.wpb_column>.vc_column-inner>.wpb_wrapper>.wpb_text_column {
+	margin-bottom: 0 !important;
+}
+
+.tribe-events-single {
+	padding-bottom: 0 !important;
+}
+
+/* timeline on our-story */
+.hex-desc {
+	display: none;
+}
+
+.zoomtimeline.mode-slider .the-item p {
+	font-style: normal !important;
+	font-size: 14px !important;
+}
+
+ul.slick-dots {
+	margin: 0;
+	padding: 10px 0;
+	position: absolute;
+	display: inline-block !important;
+	width: 15%;
+	/* left: 0; */
+	bottom: 30px;
+}
+
+td.location_search_cell {
+	padding: 2% !important;
+}
+
+#location_search_distance_field {
+	border: 1px solid;
+}
+
+/*--------------------------------------------------------------
+## VIN 65 PAGES AND COMMENTS
+--------------------------------------------------------------*/
+#v65-modalAgeVerification {
+	border: 1px solid #666;
+	background-color: #ffffff;
+	position: relative;
+	left: 0;
+	top: 20%;
+	margin: auto;
+	width: 40%;
+	z-index: 103;
+}
+
+.vin65-hero {
+	padding-top: 100px;
+	background-image: url(https://prv.wpengine.com/wp-content/uploads/2017/04/shop-sub-nav-bkgd-.png?id=434) !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	height: 220px;
+}
+
+.error-vin65-hero {
+	padding-top: 100px;
+	background-image: url(https://prv.wpengine.com/wp-content/uploads/2017/04/shop-sub-nav-bkgd-.png?id=434) !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+
+}
+
+.vin65-hero .vc_column-inner {
+	height: 0;
+}
+
+.vin65-bottom-hero-row {
+	background-image: url(https://prv.wpengine.com/wp-content/uploads/2017/04/membership-promo.jpg) !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+.vin65-margin-psd {
+	margin-top: 18%;
+	margin-left: 10%;
+	width: 40%;
+}
+
+.mobile-sidebar {
+	display: none;
+}
+
+.sub-nav {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	padding: 0 7%;
+	align-items: center;
+}
+
+.search-bar-title {
+	width: 24%;
+	position: relative;
+	bottom: 110px;
+}
+
+.member-search-bar-title {
+	width: 24%;
+	position: relative;
+	bottom: 15px;
+}
+
+.search-bar-title h3 {
+	display: block;
+	width: 300%;
+	margin-top: 0;
+	font-size: 10px !important;
+}
+
+.member-search-bar-title h3 {
+	display: block;
+	width: 300%;
+	margin-top: 0;
+	font-size: 10px !important;
+}
+
+.search-bar-title h3 ul li {
+	/*margin-bottom: 24px!important;*/
+	font-weight: 700 !important;
+}
+
+.member-search-bar-title h3 ul li {
+	/*margin-bottom: 24px!important;*/
+	font-weight: 700 !important;
+}
+
+#sidebar-container {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	width: 75%;
+	/*align-items: center;*/
+}
+
+#sidebar-container .widget {
+	width: 25%;
+}
+
+#sidebar-container .widget h3 {
+	font-weight: 700 !important;
+}
+
+#sidebar-container .widget div ul li,
+.member-list ul li a {
+	font-family: "Gotham A", "Gotham B", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+.desktop-sidebar.member-list {
+	padding-left: 7px;
+	display: block;
+	width: 70%;
+}
+
+.member-list ul {
+	column-count: 1;
+	width: 103%;
+}
+
+.member-list ul li {
+	display: inline-block;
+	padding-right: 2%;
+}
+
+.reverse-column {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column-reverse;
+	-webkit-flex-direction: column-reverse;
+}
+
+.textwidget {
+	padding-top: 40px;
+}
+
+.white-bkgd,
+.product-row {
+	background-color: #fff;
+}
+
+.product-row:nth-child(even) {
+	flex-direction: row-reverse;
+	-webkit-flex-direction: row-reverse;
+}
+
+.product-image {
+	background-image: url(https://prv.wpengine.com/wp-content/uploads/2017/04/shop-bottle-bkgd.jpg) !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+.product-image>.vc_column-inner {
+	padding: 0 !important;
+}
+
+#v65-searchWidgetButton {
+	display: none;
+}
+
+.member-search-bar-title {
+	width: 20%;
+}
+
+.member-search-bar-title #v65-searchWidgetInput {
+	display: inline-block;
+	width: 80% !important;
+	padding: 5% 0 10% 0;
+}
+
+.navbar.navbar-static-top {
+	width: 75%;
+}
+
+#v65-searchWidgetInput {
+	display: inline-block;
+	width: 80% !important;
+	/*padding: 30% 0 10% 0;*/
+}
+
+.product-description>.vc_column-inner {
+	padding: 3% 10% !important;
+}
+
+.v65-product-title.v65-title {
+	font-weight: 700 !important;
+}
+
+.view-product-details {
+	/*text-transform: uppercase;*/
+	font-weight: 700;
+}
+
+.v65-product-addToCart {
+	padding: 10px;
+	display: inline-block;
+}
+
+.v65-product-addToCart-button button {
+	border: none !important;
+}
+
+.v65-product-addToCart-button button span {
+	background: transparent !important;
+	color: #403f3d !important;
+	text-transform: uppercase !important;
+	/*border:1px solid #403f3d!important;*/
+	border: none !important;
+	border-radius: 0 !important;
+	transition: .5s !important;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+}
+
+.v65-product-addToCart-button button span:hover {
+	background: #403f3d !important;
+	color: #fff !important;
+}
+
+.cart-action {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+}
+
+/*.action*/
+.v65-product-actionMessage {
+	display: inline;
+	color: #a15e27;
+	margin: 0 20px;
+	text-transform: uppercase;
+}
+
+.v65-paging.v65-group {
+	display: none !important;
+}
+
+.product-items>.vc_column-inner {
+	padding: 0 !important;
+}
+
+.search-bar-title ul {
+	display: flex;
+	display: -webkit-flex;
+}
+
+.member-search-bar-title ul {
+	display: flex;
+	display: -webkit-flex;
+}
+
+.search-bar-title ul li {
+	margin: 0 3px;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+	display: inline-block;
+}
+
+.search-bar-title ul li a {
+	margin: 0 3px;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+}
+
+.member-search-bar-title ul li {
+	margin: 0 3px;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+}
+
+.member-search-bar-title ul li a {
+	margin: 0 3px;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+}
+
+.category-action .v65-product-addToCart-button button span {
+	/*display:none;*/
+	font-size: 12px !important;
+	font-weight: 700;
+}
+
+.shopping-cart .v65-product-addToCart-button button.add-to-cart span {
+	display: block;
+	border: 1px solid #fff !important;
+	height: auto;
+	padding: 4% 15%;
+}
+
+/*.category-action .v65-product-addToCart-button button:after {
+    content: 'ADD';
+    font-size: 12px!important;
+    font-weight: 700;
+}*/
+.shopping-cart .v65-product-addToCart-button button.add-to-cart span:before {
+	content: '+';
+	color: #fff;
+	font-size: 20px !important;
+}
+
+.navbar-header.dark-grey button {
+	border: none !important;
+	background: transparent !important;
+	color: #403f3d !important;
+	text-transform: uppercase !important;
+	border-radius: 0 !important;
+	transition: .5s !important;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+}
+
+.navbar-header.dark-grey button:hover {
+	background: transparent !important;
+	color: #403f3d !important;
+}
+
+.navbar-collapse.collapse.in {
+	background: rgba(65, 65, 65, 0.8) !important;
+	padding-left: 30px !important;
+	display: block !important;
+	width: 50% !important;
+	border-bottom: 1px dotted;
+	padding-right: 10px;
+	padding-left: 0;
+	left: 0;
+	position: fixed !important;
+	top: 100px;
+	z-index: 10000;
+	transition-duration: 0.5s;
+}
+
+.modalBtn {
+	height: auto !important;
+}
+
+.modalBtn span,
+.linkAltBtn span,
+.largeLinkBtn span,
+.modalLinkAltBtn.v65-cartRemoveButton span,
+.largeBtn span,
+.linkBtn span,
+.defaultBtn span {
+	color: inherit !important;
+	font-weight: inherit;
+}
+
+#v65-fieldset-wholesalerInfo,
+#v65-fieldset-billingInfo,
+#v65-fieldset-shippingOptions,
+#v65-fieldset-shippingInfo,
+#v65-fieldset-paymentMethod,
+#v65-fieldset-sourceCode,
+#v65-fieldset-usernamePassword,
+#v65-fieldset-gift {
+	width: 60% !important;
+}
+
+div#v65-checkoutCartSummaryWrapper {
+	width: 35%;
+	display: inline-block;
+	float: right;
+}
+
+#v65-checkCartSummaryMoreOptions {
+	width: 50% !important
+}
+
+#v65-checkBilling input[name=BillFirstName],
+#v65-checkBilling input[name=BillLastName],
+#v65-checkBilling input[name=BillCompany],
+#v65-checkBilling input[name=BillCity],
+#v65-checkBilling input[name=BillMainPhone],
+#v65-checkBilling input[name=BillEmail],
+#v65-checkBilling select[name=BillStateCode],
+#v65-checkBilling input[name=BillZipCode],
+#v65-checkBilling input[name=BillAddress],
+#v65-checkBilling input[name=BillAddress2],
+#v65-checkBilling textarea[name=OrderNotes] {
+
+	width: 100% !important;
+}
+
+#v65-checkBilling input[name=NickName],
+#v65-checkBilling input[name=ShipFirstName],
+#v65-checkBilling input[name=ShipLastName],
+#v65-checkBilling input[name=ShipCompany],
+#v65-checkBilling input[name=ShipCity],
+#v65-checkBilling input[name=ShipMainPhone],
+#v65-checkBilling input[name=ShipEmail],
+#v65-checkBilling input[name=ShipAddress],
+#v65-checkBilling input[name=ShipAddress2],
+#v65-checkBilling input[name=ShipZipCode],
+#v65-checkBilling textarea[name=giftMessage],
+#v65-checkBilling select[name=ShipStateCode] {
+
+	width: 100% !important;
+}
+
+.widget.subwidget.nav.navbar-nav ul {
+	column-count: 4 !important;
+}
+
+.widget.subwidget.nav.navbar-nav h3 {
+	margin-top: 0 !important;
+}
+
+.v65-productWrapper {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.v65-productWrapper .v65-product-rightCol {
+	float: right;
+	width: 50% !important;
+}
+
+.v65-productWrapper .v65-product-leftCol {
+	float: left;
+	width: 45% !important;
+	margin-right: 0 !important;
+	padding: 2% 5%;
+}
+
+div.accolades {
+	padding-bottom: 8px;
+}
+
+div.accolades p {
+	font-family: "Gotham A", "Gotham B";
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 14px !important;
+}
+
+.v65-productAddToCart-drilldown {
+	color: #fff !important;
+}
+
+.v65-product-addToCart-quantity input[type='text'] {
+	color: #414141;
+}
+
+.v65-product-drilldownLink {
+	display: block;
+	font-style: italic;
+	text-transform: capitalize;
+	font-family: "adobe-caslon-pro", serif;
+	font-size: 18px !important;
+	letter-spacing: 1px;
+	line-height: 1.8;
+	color: #a15e27 !important;
+}
+
+div.v65-product-drilldownLink>a {
+	color: #a15e27 !important;
+}
+
+button.defaultBtn.add-to-cart {
+	color: #fff !important;
+}
+
+.drilldown-action .v65-product-actionMessage {
+	color: #fff !important;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.wine-info {
+	background: #d6d3cc;
+	/*display: flex;*/
+	padding: 5%;
+}
+
+.wine-notes {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+
+.wine-detail-notes {
+	position: relative;
+	display: block;
+	width: 100%;
+
+}
+
+.wine-sub-notes {
+	width: 50%;
+}
+
+.wine-notes .wine-sub-notes:first-child .wine-note-description {
+	display: block;
+}
+
+.wine-notes .wine-sub-notes h4 {
+	padding: 2% 4%;
+	text-align: center;
+}
+
+.wine-notes .wine-sub-notes:nth-child(2) h4,
+.wine-notes .wine-sub-notes:nth-child(3) h4,
+.wine-notes .wine-sub-notes:nth-child(4) h4 {
+	/*border-left: 2px solid;*/
+}
+
+.v65-professionalReview:nth-child(4),
+.v65-professionalReview:nth-child(5),
+.v65-professionalReview:nth-child(6) {
+	display: none;
+}
+
+.wine-note-description {
+	/*display: none;*/
+	width: 90%;
+	position: relative;
+	top: 20px;
+	left: 15px;
+	padding: 0% 5% 5% 0;
+	margin-bottom: 30px;
+}
+
+.v65-product-attributeLabel {
+	display: none !important;
+}
+
+.v65-product-relatedProducts-title {
+	/*display:none!important;*/
+	padding: 2%;
+	background: #d6d3cc;
+	margin-bottom: 0;
+}
+
+.alchol-ph-sugar {
+	display: flex;
+	display: -webkit-flex;
+}
+
+.wine-awards-collapse {
+	display: block;
+	width: 100%;
+}
+
+.wine-awards {
+	position: relative;
+	/*top: 50px;*/
+	/*margin-bottom: 50px;*/
+	/*border-bottom: 1px solid;*/
+	padding-bottom: 35px;
+	padding-right: 50px
+}
+
+.wine-awards .v65-product-attributeValue {
+	font-size: 20px;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+.v65-product-attributeValue {
+	font-family: "adobe-caslon-pro", serif;
+	/*font-size:18px!important;*/
+	letter-spacing: 1px;
+	line-height: 1.8;
+}
+
+.social-icons {
+	position: relative;
+	top: 23px;
+	left: 15px;
+	margin-bottom: 10px !important;
+	display: inline-block;
+	border-top: 1px solid;
+	padding-top: 25px;
+	padding-right: 165px;
+}
+
+.v65-product-relatedProducts .v65-product-relatedProducts-product {
+	width: 33.333% !important;
+}
+
+.v65-product-title a {
+	font-weight: 500;
+	color: inherit;
+	font-size: 16px;
+}
+
+.v65-product-relatedProducts .v65-product-addToCart-priceWrapper {
+	display: inline;
+}
+
+.promo-products {
+	display: flex;
+	display: -webkit-flex;
+}
+
+.v65-promo-photo {
+	text-align: center;
+}
+
+.v65-promo-photo img {
+	width: 50%;
+	text-align: center;
+}
+
+.view-product.dark-grey {
+	display: inline-block;
+}
+
+.view-product.dark-grey a.vc_general {
+
+	font-size: 12px !important;
+	padding: 10% 20%;
+	;
+}
+
+div.promo-text {
+	padding: 15% 10%;
+}
+
+.view-action {
+	padding: 5% 0;
+}
+
+.more-padding {
+	padding: 5% !important;
+}
+
+#v65-checkoutFooter,
+#v65-cartFooter {
+	margin-bottom: 35px !important;
+}
+
+.member-login>.v65-pod {
+	margin-top: 50px !important;
+}
+
+.v65-promo-photo>a>img {
+	height: 300px;
+}
+
+.mail-list {
+	padding: 5%;
+	background: #d4d0c9;
+}
+
+.mail-list h4 {
+	text-align: center;
+}
+
+.mail-list .v65-form.v65-formLeft {
+	width: 100%;
+}
+
+.mail-list .v65-form.v65-formLeft legend {
+	display: none;
+}
+
+.mail-list .v65-form.v65-formLeft div {
+	width: 70%;
+	margin: auto;
+}
+
+.mail-list .v65-form.v65-formLeft div input {
+	width: 100%;
+}
+
+/* #v65-cartCheckOutCoupons > form > fieldset:before{
+ 	content:'Have an offer code?';
+ 	font-size: 12px;
+ }*/
+#v65-cartCheckOutCoupons>form>fieldset>div>button:after {
+	content: 'APPLY';
+}
+
+#v65-cartCheckOutCoupons>form>fieldset>div>button>span {
+	display: none;
+}
+
+#v65-cartCheckOutCoupons>form>fieldset>div>button {
+	padding: 0 2%;
+}
+
+#v65-cartCheckOutCoupons>form>fieldset>legend,
+#v65-giftCardFormWrapper {
+	/*display:none!important;*/
+}
+
+#v65-CouponCode {
+	width: 70%;
+}
+
+.v65-modalLoginLink {
+	font-style: italic;
+	font-weight: 900;
+}
+
+#v65-modalContent p a,
+a.v65-modalLoginLink {
+	color: #a15e27 !important;
+}
+
+#v65-modalForgotPasswordLink {
+	padding: 0 5px;
+}
+
+.alertYellow {
+	background-color: #fff !important;
+}
+
+#v65-signUpClubSummaryWrapper {
+	width: 35%;
+}
+
+#v65-FirstName,
+#v65-LastName,
+#v65-Company,
+#v65-Address,
+#v65-Address2,
+#v65-City,
+#v65-billingInformation input[name=MainPhone],
+#v65-billingInformation input[name=Email],
+#v65-billingInformation textarea[name=Notes],
+#v65-StateCode,
+#v65-ZipCode,
+#v65-fieldset-usernamePassword #Username,
+#v65-fieldset-usernamePassword #Password,
+#v65-fieldset-usernamePassword #ConfirmPassword,
+#nameoncard,
+#creditcard {
+	width: 100% !important;
+}
+
+div[v65js=billAddressBlock]>div:nth-child(5):before {
+	content: 'Suite/Apt/Floor';
+	font-family: 'Gotham A', 'Gotham B', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+fieldset#v65-fieldset-usernamePassword>div:nth-child(2),
+fieldset#v65-fieldset-paymentMethod p:nth-child(2) {
+	display: none !important;
+}
+
+fieldset#v65-fieldset-usernamePassword>div:nth-child(5):after {
+	content: "Your Username must be no longer than 20 characters. Your password must be a minimum of 6 characters.";
+	font-family: 'Gotham A', 'Gotham B', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+fieldset#v65-fieldset-paymentMethod div.v65-additionalComments:after {
+	content: 'The security of your information is important to us. Your credit card information is encrypted using secure socket layer technology.';
+	font-family: 'Gotham A', 'Gotham B', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#v65-checkoutFooter .floatRight button.largeBtn {
+	font-size: 16px !important;
+}
+
+#v65-couponFormWrapper form.v65-form fieldset legend,
+#v65-couponFormWrapper form.v65-form fieldset div p {
+	display: none;
+}
+
+/*#v65-couponFormWrapper form.v65-form fieldset div:before{
+	content: "To apply an offer code, enter the code and click apply to update your order total.";
+	font-size: 16px;
+	font-family:"adobe-caslon-pro", serif;
+
+}*/
+/*#v65-couponFormWrapper form.v65-form fieldset:before{
+	content:"Have an offer code?";
+	font-family: 'Gotham A', 'Gotham B', sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}*/
+#v65-fieldset-choices {
+	display: inline-block;
+	width: 60%;
+	background: #f7f7f7;
+	border: 1px solid #eeeeee;
+}
+
+#v65-fieldset-choices>legend {
+	background: #fff;
+}
+
+.member-login>h1 {
+	display: none !important;
+}
+
+.v65-clubSignUp-Teaser {
+	margin-bottom: 35px !important;
+}
+
+/*div.v65-widgetModalCart-dropdown div.v65-widgetModalCart-itemMessageError{
+	display: none;
+}*/
+/*div.v65-widgetModalCart-dropdown div.v65-widgetModalCart-closeButton:after{
+	content:
+	"ERROR ADDING WINE TO CART. YOU MUST BE A WINE CLUB MEMBER AND LOG IN TO PURCHASE THIS WINE.";
+}*/
+div.v65-widgetModalCart-dropdown div.v65-widgetModalCart-closeButton>a {
+	margin-right: 90%;
+}
+
+#v65-modalContent .v65-form,
+#v65-modalContent .v65-form form {
+	width: 100%;
+}
+
+/*#v65-modalContent .v65-form fieldset:before{
+	content:'By clicking submit you confirm that you are at least 21 years of age.';
+	font-family: 'Gotham A', 'Gotham B', sans-serif;
+}
+#v65-modalContent .v65-form fieldset div:nth-child(2){
+	display: none;
+}*/
+.v65-form#v65-loginForm {
+	width: 350px;
+}
+
+.v65-form#v65-loginForm fieldset div input[name=username],
+.v65-form#v65-loginForm fieldset div input[name=password] {
+	width: 300px !important;
+}
+
+.v65-formLeft {
+	float: none;
+	margin: 0 1em 1em 0;
+	width: 100%;
+}
+
+div#v65-modalContent p:last-child a {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+/* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+## Events
+--------------------------------------------------------------*/
+#tribe-events-content {
+	padding: 150px 50px 0 50px;
+}
+
+/*.tribe-events-event-image{
+    display:none!important;
+}*/
+.single-tribe_events .tribe-events-content {
+	padding-top: 0;
+}
+
+.event-detail-hero {
+	position: relative;
+	height: 75px;
+}
+
+.single-tribe_events .tribe-events-event-meta {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+
+.tribe-events-meta-group.tribe-events-meta-group-details,
+.tribe-events-meta-group.tribe-events-meta-group-venue {
+	width: 100% !important;
+}
+
+.tribe-events-single ul.tribe-related-events li {
+	margin: 1% 2%;
+	padding: 0px 0 20px 0;
+}
+
+.tribe-events-related-events-title,
+.tribe-related-events {
+	display: none;
+}
+
+.tribe-related-events.tribe-clearfix {
+	background: #d4d0c9;
+	margin-bottom: -2% !important;
+
+}
+
+#tribe-cutom-img {
+	margin-top: 25px;
+}
+
+.vc_tta-tab.vc_active a,
+div.vc_tta-panel-body,
+.tribe-bar-filters {
+	background: #fff !important;
+}
+
+div.vc_tta-container {
+	margin-bottom: 0 !important;
+}
+
+div.vc_tta-panels {
+	border: none !important;
+	border-radius: 0 !important;
+}
+
+.event-item.event-list-row:nth-child(even),
+.recipe-item.recipe-list-row:nth-child(even) {
+	display: flex !important;
+	display: -webkit-flex !important;
+	flex-direction: row-reverse;
+	-webkit-flex-direction: row-reverse;
+}
+
+div.vc_tta-panel-body {
+	padding: 0 !important;
+}
+
+div.vc_grid-container {
+	margin-bottom: 0 !important;
+}
+
+div.vc_grid-container-wrapper {
+	background: #fff;
+}
+
+div.vc_pageable-slide-wrapper {
+	margin-right: 0 !important;
+}
+
+div.vc_gitem-post-data-source-post_date,
+.tribe-event-schedule-details {
+	font-family: "adobe-caslon-pro", serif;
+	font-size: 18px !important;
+	font-style: italic;
+	letter-spacing: 1px;
+	line-height: 1.8;
+}
+
+div.vc_gitem-post-data-source-post_title h4 {
+	font-weight: 700 !important;
+}
+
+.tribe-events-read-more,
+.tribe-events-nav-next a,
+.tribe-events-nav-previous a,
+div.no-border a.vc_gitem-link.vc_general.vc_btn3,
+.tribe-events-month-event-title a {
+	background: transparent !important;
+	color: #a15e27 !important;
+	text-transform: uppercase !important;
+	border: none !important;
+	border-radius: 0 !important;
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 10px !important;
+	padding: 0 !important;
+}
+
+.summary,
+.summary a,
+.tribe-events-list-event-title a,
+.tribe-events-venue-details a,
+.tribe-events-gmap {
+	color: #a15e27 !important;
+}
+
+.tribe-events-list-event-title a:hover,
+.tribe-events-read-more:hover,
+.summary a:hover,
+.tribe-events-nav-next a:hover,
+.tribe-events-nav-previous a:hover,
+div.no-border a.vc_gitem-link.vc_general.vc_btn3:hover,
+.tribe-events-month-event-title a:hover {
+	background: transparent !important;
+	color: #a15e27 !important;
+	text-decoration: underline !important;
+}
+
+/*.bg-img.wpb_column.vc_column_container.vc_col-sm-4.vc_col-has-fill{*/
+/*border:none!important;*/
+/*}*/
+table.tribe-events-calendar thead tr th,
+.tribe-events-list-separator-month,
+#tribe-bar-collapse-toggle,
+#tribe-bar-dates,
+.tribe-bar-search-filter,
+.tribe-bar-views-inner,
+#tribe-bar-form input[type=text] {
+	font-family: "Gotham A", "Gotham B";
+	font-style: normal;
+	font-weight: 500 !important;
+	letter-spacing: 2px;
+	/*font-size: 10px!important;*/
+	/*padding: 0!important;*/
+}
+
+#tribe-bar-form .tribe-bar-submit input[type=submit] {
+	letter-spacing: 2px !important;
+}
+
+.mobile-active,
+.mobile-active>div,
+.mobile-active>div>a,
+.tribe-events-grid .tribe-grid-header .tribe-week-today,
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-],
+.tribe-events-calendar td.tribe-events-present.mobile-active {
+	background-color: #a15e27 !important;
+}
+
+.tribe-events-notices {
+	background: #403f3d !important;
+	border-radius: 0 !important;
+	border: none !important;
+	color: #fff !important;
+	margin: 10px 0 18px;
+	padding: 8px 35px 8px 14px;
+	text-shadow: none !important;
+}
+
+.tribe-event-description p {
+	font-size: 16px !important;
+}
+
+.tribe-events-tooltip {
+	padding: 12% !important;
+	overflow-y: visible;
+}
+
+.tribe-mobile-day {
+	padding: 5% !important;
+}
+
+#tribe-events-content {
+	padding: 2% !important;
+	margin-bottom: 0;
+}
+
+div#tribe-events-content.tribe-events-single {
+	padding: 2% 0 !important;
+}
+
+.upcoming-feed {
+	margin-top: -30px !important;
+}
+
+.tribe-events-meta-group.tribe-events-meta-group-details dl dt:nth-child(5),
+.tribe-events-meta-group.tribe-events-meta-group-details dl dd.tribe-events-event-cost {
+	display: none !important;
+}
+
+
+/* ======================================================================= *\
+		#MEDIA QUERY
+\* =======================================================================  */
+
+@media(max-width:1224px) {
+	.bg-img .vc_column-inner {
+		background-size: 130%;
+	}
+}
+
+/* ###################################################### *\
+				1024px
+\* ###################################################### */
+
+
+@media (min-width: 1025px) {
+	.vc_col-sm-1 {
+		width: 9.333333% !important;
+	}
+
+}
+
+
+@media(max-width:1025px) {
+
+	.text-24,
+	.text-24 h1,
+	.text-24 h2,
+	.text-24 h3,
+	.text-24 h4,
+	.text-24 h5,
+	.text-24 h6,
+	.text-24 p,
+	.text-24 a {
+		font-size: 18px;
+	}
+
+	.text-20,
+	.text-20 h1,
+	.text-20 h2,
+	.text-20 h3,
+	.text-20 h4,
+	.text-20 h5,
+	.text-20 h6,
+	.text-20 p,
+	.text-20 a {
+		font-size: 16px;
+	}
+
+	.text-18,
+	.text-18 h1,
+	.text-18 h2,
+	.text-18 h3,
+	.text-18 h4,
+	.text-18 h5,
+	.text-18 h6,
+	.text-18 p,
+	.text-18 a {
+		font-size: 14px;
+	}
+
+	.main-navigation ul {
+		display: block;
+		float: right;
+		width: 100%;
+	}
+
+	.fa-bars {
+		font-size: 20px;
+	}
+
+	#footer-content {
+		justify-content: center;
+	}
+
+	.socialmedia {
+		-webkit-flex: 0;
+		flex: 0;
+		float: none;
+	}
+
+	.another-menu {
+		display: none
+	}
+
+	.bg-img .vc_column-inner {
+		max-height: 170px;
+	}
+
+	.tablet-hidden {
+		display: none !important;
+	}
+
+	.mobile-hide {
+		width: 10.333333% !important;
+	}
+
+	.club-margin-psd {
+		margin-left: 3% !important;
+	}
+
+	.bg-img .vc_column-inner {
+		background-size: cover;
+	}
+
+	ul.footer-links li {
+		width: auto;
+	}
+}
+
+/* ###################################################### *\
+				800px
+\* ###################################################### */
+
+@media(max-width:801px) {
+	.main-logo-img {
+		margin-left: 0;
+	}
+
+	.mobile-hide {
+		width: 12.333333% !important;
+	}
+
+	.mobile-hide.vc_column_container>.vc_column-inner {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	#vin65-remote-tools {
+		margin-bottom: 0;
+		margin-right: 9%;
+	}
+
+	.bg-img .vc_column-inner {
+		background-size: cover !important;
+		background-position: 50% 42% !important;
+	}
+
+}
+
+/* ###################################################### *\
+				768px
+\* ###################################################### */
+@media (min-width: 769px) {
+
+	.navbar-header button {
+		display: none;
+	}
+}
+
+@media(max-width:769px) {
+	.main-logo-img {
+		width: 35% !important;
+	}
+
+	.reserve-tasting-row,
+	.estate-vineyards-row,
+	.private-event-row {
+		flex-direction: column;
+	}
+
+	.estate-vineyards-row .vc_column_container,
+	.private-event-row .vc_column_container,
+	.reserve-tasting-row .vc_column_container {
+		width: 100%;
+	}
+
+	.reserve-tasting-row:nth-child(odd),
+	.estate-vineyards-row:nth-child(even),
+	.private-event-row:nth-child(even) {
+		flex-direction: column-reverse !important;
+		-webkit-flex-direction: column-reverse !important;
+	}
+
+	.vc_row.content-box.col-5 {
+		flex-wrap: wrap;
+	}
+
+	.vc_row.content-box.col-5 .bg-img.our-story:first-child,
+	.vc_row.content-box.col-5 .bg-img.our-story:nth-child(2),
+	.vc_row.content-box.col-5 .bg-img.our-story:nth-child(3) {
+		width: 33.333%;
+	}
+
+	.vc_row.content-box.col-5 .bg-img.our-story:nth-child(4),
+	.vc_row.content-box.col-5 .bg-img.our-story:last-child {
+		width: 50%;
+	}
+
+	.vc_row.content-box.col-6 .bg-img.wine-bottle,
+	.vc_row.content-box.col-4 .bg-img.wpb_column {
+		width: 50%;
+	}
+
+	.vc_row.content-box.col-7 .bg-img.wine-bottle:first-child,
+	.vc_row.content-box.col-7 .bg-img.wine-bottle:nth-child(2),
+	.vc_row.content-box.col-7 .bg-img.wine-bottle:nth-child(3) {
+		width: 33.333% !important;
+	}
+
+	.vc_row.content-box.col-7 .bg-img.wine-bottle:nth-child(4),
+	.vc_row.content-box.col-7 .bg-img.wine-bottle:nth-child(5),
+	.vc_row.content-box.col-7 .bg-img.wine-bottle:nth-child(6),
+	.vc_row.content-box.col-7 .bg-img.wine-bottle:last-child {
+		width: 50% !important;
+
+	}
+
+	.appllation-society,
+	.collectors-club {
+		width: 100% !important;
+	}
+
+	.membership-column {
+		width: 31% !important;
+	}
+
+	.toggle-bar-row {
+		display: inline-block !important;
+		position: absolute !important;
+		left: 90%;
+		width: 8% !important;
+		top: 30px;
+		margin-top: 10px !important;
+		z-index: 10000;
+	}
+
+	.toggle-bar {
+		display: block;
+	}
+
+	.hide-on-mobile-nav {
+		display: none !important;
+	}
+
+	.mobile-only-nav {
+		display: block !important;
+	}
+
+	#mobile-navbar {
+		width: 40%;
+		float: right;
+		overflow-y: scroll !important;
+		margin-right: 0px;
+		height: 990px;
+		padding-bottom: 20px;
+	}
+
+	#mobile-navbar .wpb_column.vc_column_container {
+		width: 100%;
+		padding-right: 15px;
+	}
+
+	/* ***************************** vin65 ***************************** */
+	.promo-products {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+	}
+
+	.promo-product {
+		width: 50%;
+		height: 100%;
+	}
+
+	.product-image {
+		height: 100%;
+	}
+
+	.v65-productAddToCart-drilldown {
+		width: 200%;
+	}
+
+}
+
+/* ###################################################### *\
+				600px
+\* ###################################################### */
+
+@media(max-width:650px) {
+
+	html,
+	body {
+		overflow-x: hidden;
+	}
+
+	.site-title {
+		margin: 10px 0;
+	}
+
+	.main-logo-img {
+		width: inherit !important;
+	}
+
+	.main-navigation {
+		width: 35%;
+		position: absolute;
+		right: 0%;
+		top: 0%;
+		/*z-index: 9999;*/
+		/*text-align: right;*/
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		display: -webkit-flex;
+		/* Safari */
+		-webkit-flex-direction: column;
+	}
+
+	.main-navigation li {
+		float: none;
+		position: relative;
+		margin: 1em;
+		font-size: 2vw;
+		display: block;
+		/*width: 100%;*/
+		border-bottom: 1px dotted;
+	}
+
+	.navbar-header {
+		float: right;
+	}
+
+	.navbar-toggle {
+		display: block;
+	}
+
+	.navbar-collapse.collapse {
+		display: none !important;
+		height: auto !important;
+		padding-bottom: 0;
+		overflow: visible !important;
+
+	}
+
+	.navbar-collapse.collapse.in {
+		display: block !important;
+		background: aliceblue;
+		width: 100%;
+		/*float: right;*/
+		border-bottom: 1px dotted;
+		padding-right: 10px;
+		padding-left: 0;
+		right: 0%;
+		position: relative;
+		/*top: 40px;*/
+		z-index: 9999;
+		transition-duration: 0.5s;
+	}
+
+	#navbar-header {
+		position: relative;
+		right: -7%;
+	}
+
+	/* safari */
+	.navbar-header button {
+		background: transparent;
+		border: none;
+		float: right;
+		outline: 0;
+		margin-bottom: 12px;
+
+	}
+
+	.navbar-toggle {
+		padding: 0;
+		margin-top: 0;
+		margin-right: 0;
+		margin-bottom: 0;
+		/*right: -7%;*/
+	}
+
+	.main-navigation ul {
+		padding-right: 10x;
+	}
+
+	/*.main-logo-img{
+		height: 54px;
+	}
+	.main-logo-img .wpb_single_image{
+
+		margin-bottom: 0px !important;
+		padding-top: 40px !important;
+		padding-right: 40px !important;
+
+		padding-left: 40px !important;
+	}*/
+	.main-logo-img {
+		margin-left: 0;
+	}
+
+	.tablet-hidden {
+		display: none !important;
+	}
+
+	.mobile-hide {
+		width: 12.333333% !important;
+	}
+
+	.mobile-hide.vc_column_container>.vc_column-inner {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	#vin65-remote-tools {
+		margin-bottom: 0;
+		margin-right: 9%;
+	}
+
+	img.attachment-full {
+		height: 488px;
+	}
+
+	.wpb_gallery .wpb_flexslider .flex-control-nav {
+		bottom: auto !important;
+		top: 92% !important;
+		right: 85% !important;
+		margin-top: 15px !important;
+		display: inline-block !important;
+		width: 12% !important;
+	}
+
+	.footer-social {
+		width: 25% !important;
+	}
+
+	.mobile-footer-link>.vc_column-inner>.wpb_wrapper {
+		padding: 5%;
+	}
+
+	.col-7 .bg-img,
+	.bg-img.our-story {
+		width: 100% !important;
+	}
+
+	.bg-img.wine-bottle .vc_column-inner {
+		background-size: 100%;
+		background-position: top left !important;
+	}
+
+	.vc_row.content-box.col-6 .bg-img.wine-bottle {
+		width: 100%;
+	}
+
+	.bg-img .vc_column-inner {
+		max-height: inherit;
+	}
+
+	/*}
+
+@media(max-width:769px){*/
+	.cta-small {
+		width: 100% !important;
+		margin-bottom: 0 !important;
+	}
+
+	.hero-row div.upb_row_bg {
+		/*background-position: center!important;*/
+	}
+
+	.mobile-only {
+		display: block !important;
+	}
+
+	.hide-on-mobile {
+		display: none !important;
+	}
+
+	.nav-level-1-mobile {
+		width: 100% !important;
+		margin-bottom: 0 !important;
+		/*border-bottom: 2px dotted #fff;*/
+	}
+
+	.utility-navigation {
+		padding-bottom: 10px;
+	}
+
+	#mobile-navbar {
+		width: 60%;
+		float: right;
+		overflow-y: scroll !important;
+		margin-right: 0px;
+		height: 480px;
+		padding-bottom: 20px;
+	}
+
+	#mega-visit-us-clicked,
+	#mega-event-clicked,
+	#mega-wines-clicked,
+	#mega-shop-clicked,
+	#mega-membership-clicked,
+	#mega-vineyard-kitchen-clicked,
+	#mega-estate-vineyards-clicked,
+	#mega-our-team-clicked,
+	#mega-our-story-clicked {
+		/*display: block;*/
+		/* position: relative; */
+		width: 100%;
+		background: rgba(255, 255, 255, 1);
+
+	}
+
+	#mega-visit-us-clicked {
+		margin: 20px 0;
+	}
+
+	#mega-our-story-clicked {
+		margin: 32px 0;
+	}
+
+	#mega-event-clicked {
+		margin: 116px 0;
+	}
+
+	#mega-wines-clicked {
+		margin: 55px 0;
+	}
+
+	#mega-shop-clicked {
+		margin: 75px 0;
+	}
+
+	#mega-membership-clicked {
+		margin: 95px 0;
+	}
+
+	#mega-visit-us-clicked .first-column,
+	#mega-visit-us-clicked .second-column,
+	#mega-visit-us-clicked .third-column,
+	#mega-visit-us-clicked .fourth-colum {
+		width: 100% !important;
+		/*text-align: center;*/
+		margin: 0;
+	}
+
+	img.attachment-full {
+		height: 220px;
+	}
+
+	ul.slides li img {
+		height: 259px;
+	}
+
+	.toggle-bar {
+		position: fixed;
+		top: 75px;
+	}
+
+	.toggle-bar-row {
+		display: inline-block !important;
+		position: absolute !important;
+		left: 90%;
+		width: 8% !important;
+		top: 30px;
+		margin-top: 10px !important;
+		z-index: 10000;
+	}
+
+	.vin65-toggle-bar-row {
+		display: inline-block !important;
+		position: absolute !important;
+		left: 90%;
+		width: 8% !important;
+		top: 50px;
+		margin-top: 10px !important;
+		z-index: 10000;
+	}
+
+	.toggle-bar {
+		display: block;
+	}
+
+	.mobile-hide {
+		width: 100% !important;
+		background: #fff;
+		height: 20px;
+		/*top:55px;*/
+	}
+
+	.mobile-hide div.vc_column-inner div.wpb_wrapper {
+		height: 20px !important;
+	}
+
+	.main-logo-img {
+		height: 60px;
+		margin-top: 0;
+	}
+
+	.main-logo-img div.vc_column-inner div.wpb_wrapper {
+		height: 60px !important;
+	}
+
+	.main-logo {
+		width: 90%;
+		margin: auto;
+		padding: 10px 40px !important;
+	}
+
+	.main-logo .vc_single_image-wrapper img {
+		width: 85%;
+	}
+
+	.wpb_gallery .wpb_flexslider .flex-control-nav {
+		bottom: auto !important;
+		top: 87% !important;
+		right: 75% !important;
+		margin-top: 15px !important;
+		display: inline-block !important;
+		width: 25% !important;
+	}
+
+	.margin-psd {
+		margin-top: 4%;
+	}
+
+	.margin-psd .vc_column-inner {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+
+	.reserve-tasting-row:nth-child(odd),
+	.estate-vineyards-row:nth-child(even),
+	.private-event-row:nth-child(even) {
+		flex-direction: column-reverse !important;
+		-webkit-flex-direction: column-reverse !important;
+	}
+
+	.recipe-item-image>div.vc_column-inner {
+		padding: 150px 50px;
+	}
+
+	.right-corner-margin-psd {
+		margin-top: 5%;
+		margin-left: 10%;
+		margin-right: 0;
+	}
+
+	#main-footer {
+		display: block;
+	}
+
+	.footer-social {
+		display: inline-block !important;
+		width: 50% !important;
+		text-align: right;
+	}
+
+	.footer-logo {
+		display: inline-block !important;
+		width: 50% !important;
+	}
+
+	.mobile-footer-link ul.footer-links li {
+		display: inline-block;
+		width: 40%;
+	}
+
+	.hide-on-small {
+		display: none;
+	}
+
+	.copy-right-row {
+		width: 100% !important;
+	}
+
+	#vin65-remote-tools {
+		margin-right: 0%;
+	}
+
+	.curly-bracket {
+		display: none;
+	}
+
+	.copy-right-row .inner-copy-right {
+		width: 100% !important;
+	}
+
+	div.vc_gitem-animated-block,
+	div.vc_gitem-zone.vc_gitem-zone-c {
+		width: 100% !important;
+	}
+
+	.event-item-image {
+		height: 230px;
+	}
+
+	.level-row {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.membership-column {
+		width: 100% !important;
+		height: 100%;
+		border: 3px solid #fff;
+		height: auto !important;
+		margin: 0 !important;
+	}
+
+	.membership-column .vc_btn3-container.dark-grey,
+	.membership-column-dark .vc_btn3-container.white {
+		margin-bottom: 10px !important;
+	}
+
+	div.compare-club {
+		padding-top: 0 !important;
+	}
+
+	.collectors-club {
+		margin-top: 30px !important;
+	}
+
+	.collectors-club .vc_column-inner {
+		padding-bottom: 0 !important;
+	}
+
+	.membership-column-dark {
+		height: auto !important;
+	}
+
+	.mobile-fortis .upb_row_bg {
+		background-position: 73% !important;
+	}
+
+	/* ************** VIN65 *************************** */
+	#v65-modalAgeVerification {
+		width: 90%;
+	}
+
+	.sidebar-toggle {
+		position: fixed;
+		top: 75px;
+		left: 10px;
+		z-index: 100000;
+	}
+
+	.mobile-sidebar {
+		position: fixed;
+		top: 105px;
+		left: 0;
+		z-index: 100000;
+		background: rgba(65, 65, 65, 0.9);
+		/*opacity: 0.9;*/
+		height: 85%;
+		overflow-y: scroll;
+		width: 60%;
+	}
+
+	.member-list {
+		padding: 5px;
+	}
+
+	.sidebar-container {
+		padding: 10px;
+	}
+
+	.navbar-header button {
+		text-align: left;
+		z-index: 10000;
+		position: fixed;
+		top: 75px;
+		left: 10px;
+	}
+
+	.mobile-sidebar {
+		display: block;
+	}
+
+	.desktop-sidebar,
+	.search-bar-title,
+	.member-search-bar-title {
+		display: none !important;
+	}
+
+	.vin65-hero>.vc_column-inner {
+		padding: 0 !important;
+	}
+
+	.vin65-hero>.vc_column-inner>.wpb_wrapper>.wpb_text_column {
+		margin-bottom: 0 !important;
+	}
+
+	.navbar-static-top {
+		display: inline;
+	}
+
+	/*	.search-bar-title, .member-search-bar-title{
+		bottom: 0!important;
+	}*/
+	.mobile-sidebar>form>fieldset {
+		padding: 5px;
+	}
+
+	.v65-product-addToCart {
+		width: 100%;
+		padding: 10px 0;
+		/*display: flex;
+    	justify-content: flex-end;*/
+	}
+
+	form.v65-addToCart {
+		width: 100%;
+		text-align: right;
+	}
+
+	#v65-checkCartSummaryMoreOptions {
+		width: 100% !important;
+	}
+
+	.v65-product-addToCart-priceWrapper {
+		display: inline;
+	}
+
+	.v65-product-addToCart-button button {
+		width: 25%;
+	}
+
+	.vin65-margin-psd {
+		margin-top: 18%;
+		margin-left: 1%;
+		/*width: 40%;*/
+		padding: 5%;
+	}
+
+	.sub-nav,
+	#sidebar-container {
+		/*display: block;*/
+	}
+
+	/*	.search-bar-title, .member-search-bar-title{
+		width:100%;
+	}*/
+	#v65-searchWidgetInput {
+		padding: 0;
+	}
+
+	#sidebar-container .widget {
+		width: 100%;
+		border-bottom: 1px dotted #fff;
+	}
+
+	.textwidget {
+		padding-top: 0;
+		margin-bottom: 35px !important;
+	}
+
+	#v65-fieldset-wholesalerInfo,
+	#v65-fieldset-billingInfo,
+	#v65-fieldset-shippingOptions,
+	#v65-fieldset-shippingInfo,
+	#v65-fieldset-paymentMethod,
+	#v65-fieldset-sourceCode,
+	#v65-fieldset-usernamePassword,
+	#v65-fieldset-gift {
+		width: 100% !important;
+	}
+
+	div#v65-checkoutCartSummaryWrapper {
+		width: 100%;
+	}
+
+	#v65-checkBilling select[name=BillBirthMonth],
+	#v65-checkBilling select[name=BillBirthDay],
+	#v65-checkBilling select[name=BillBirthYear] {
+		width: 20% !important;
+	}
+
+	button.defaultBtn {
+		margin: 0 !important;
+	}
+
+	.widget.subwidget.nav.navbar-nav ul {
+		column-count: 3 !important;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #fff !important;
+	}
+
+	::-webkit-scrollbar {
+		width: 0.3em !important;
+	}
+
+	::-webkit-scrollbar-button {
+		background: #fff;
+	}
+
+	div#bs-example-navbar-collapse-1 {
+		overflow: scroll !important;
+		max-height: 90%;
+	}
+
+	.vc_row.vc_row-flex.nav-level-2 {
+		display: block;
+		/*box-shadow:0 5px 20px rgba(0,0,0,0.5)*/
+	}
+
+	.details-group {
+		display: flex;
+		display: -webkit-flex;
+		flex-direction: column-reverse;
+		-webkit-flex-direction: column-reverse;
+	}
+
+	.v65-productWrapper .v65-product-leftCol,
+	.v65-productWrapper .v65-product-rightCol {
+		width: 100% !important;
+	}
+
+	.cart-action {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		align-items: center;
+		-webkit-align-items: center;
+		border-bottom: none;
+		border-top: none;
+	}
+
+	.v65-product-addToCart-priceWrapper {
+		width: 30% !important;
+		margin: 10px 10px 10px 0;
+	}
+
+	form.v65-addToCart.v65-addToCartBottle fieldset {
+		text-align: left;
+
+	}
+
+	.v65-product-addToCart-price {
+		font-size: 1em !important;
+	}
+
+	.v65-product-addToCart-quantity input[type='text'] {
+		height: 2em;
+		line-height: 2em;
+	}
+
+	.shopping-cart .v65-product-addToCart-button button.add-to-cart {
+		width: 30%;
+		margin-left: 31px !important;
+	}
+
+	.shopping-cart {
+		width: 100%;
+	}
+
+	.v65-productWrapper {
+		padding-right: 0;
+		padding-left: 0;
+		padding-top: 0;
+	}
+
+	.wine-info {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		background: #fff;
+	}
+
+	.wine-notes {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		position: relative;
+		/*height: 85vh;*/
+	}
+
+	/*.wine-sub-notes{
+		height: 10%;
+	}*/
+	.wine-awards-collapse {
+		position: relative;
+		height: 40px;
+		bottom: 30px
+	}
+
+	.wine-awards {
+		position: absolute;
+		top: 0;
+		border: none;
+		padding-bottom: 0;
+		padding-right: 0;
+	}
+
+	.wine-detail-notes {
+		height: 65%;
+		overflow-y: visible;
+	}
+
+	.wine-note-description {
+		margin-top: 0;
+	}
+
+	.promo-products {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+	}
+
+	.wine-sub-notes {
+		width: 100%;
+	}
+
+	.wine-sub-notes h4 a {
+		word-break: break-word;
+		font-size: 10px
+	}
+
+	.wine-anlysis {
+		border: 1px dotted;
+		background: #fff;
+		margin-top: 20px;
+	}
+
+	.wine-anlysis h4 {
+		display: none;
+	}
+
+	.wine-anlysis ul {
+		padding: 5%;
+	}
+
+	/*.wine-note-description{
+		top:360px;
+	}*/
+	.cart-action.category-action .v65-product-addToCart form .v65-product-addToCart-button button.defaultBtn {
+		width: 45%;
+	}
+
+	.shopping-cart .v65-product-addToCart-button button.add-to-cart span {
+		height: 10vw;
+		padding: 0;
+	}
+
+	.v65-product-attributeValue {
+		font-size: 14px !important;
+	}
+
+	button.modalBtn,
+	a.modalLinkAltBtn.v65-cartRemoveButton {
+		border: none !important;
+		font-style: italic;
+	}
+
+	button.modalBtn:hover,
+	a.modalLinkAltBtn.v65-cartRemoveButton:hover {
+		background: transparent !important;
+		border: none !important;
+		text-decoration: underline;
+		color: #403f3d !important;
+	}
+
+	.v65-cartTax-5 {
+		width: 40% !important;
+	}
+
+	.v65-cartTax-5>form {
+		width: 100%;
+	}
+
+	.v65-cartTax-5>form>select#v65-cartStateCode {
+		width: 80%;
+	}
+
+	#v65-cartCheckOutCoupons,
+	#v65-CouponCode {
+		display: block;
+		width: 100%;
+	}
+
+	.related-products {
+		display: flex;
+		display: -webkit-flex;
+		flex-direction: column;
+		-webkit-flex-direction: column;
+	}
+
+	.related-products .v65-product-relatedProducts .v65-product-relatedProducts-product {
+		width: 100% !important;
+		padding: 5%;
+	}
+
+	.related-products .v65-product-relatedProducts .v65-product-relatedProducts-product .product-image img {
+		width: 50%;
+	}
+
+	/*.related-products .v65-product-relatedProducts .v65-product-relatedProducts-product .v65-product-addToCart-button button span{
+		display: none;
+	}
+	.related-products .v65-product-relatedProducts .v65-product-relatedProducts-product .v65-product-addToCart-button button:after{
+		content:'ADD';
+		font-size: 12px!important;
+    	font-weight: 700;
+	}*/
+	#v65-fieldset-choices {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.v65-productAddToCart-drilldown {
+		width: 100%;
+	}
+
+}
+
+
+
+/* ###################################################### *\
+				480px
+\* ###################################################### */
+@media (max-width: 481px) {
+	.promo-product {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+/* ###################################################### *\
+				PRINT
+\* ###################################################### */
+@media print {
+	body {
+		color: #000;
+		background: #fff;
+	}
+
+	.mobile-only,
+	.hide-on-mobile,
+	#main-footer,
+	.hero-row,
+	.copy-right-row,
+	nav.navigation.post-navigation,
+	.wpb_wrapper>p>em>a {
+		display: none !important;
+	}
+
+	/* .hero-row{
+  	content: url('https://prv.wpengine.com/wp-content/uploads/2017/06/Bavette-Steak-with-Cabernet.jpg');
+  }*/
+	.print-only {
+		display: block !important;
+		top: 0cm;
+	}
+}

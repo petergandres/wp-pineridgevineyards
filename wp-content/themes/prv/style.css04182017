@@ -1,0 +1,733 @@
+/*
+Theme Name: Pine Ridge Vineyards
+Theme URI: http://www.pineridgevineyards.com
+Author: Angelsmith
+Author URI: http://www.angelsmith.net
+Description: Custom theme for PRV created by Angelsmith
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: blank_template
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+blank_template is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+#primary-menu{
+	display: none;
+}
+html {
+  height: 100%!important;
+  box-sizing: border-box!important;
+	font-family: sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit!important;
+}
+
+body {
+	/*height: 100%!important;*/
+	margin: 0;
+	overflow-x: hidden;
+	position: relative!important;
+  margin: 0!important;
+  padding-bottom: 6rem!important;
+  min-height: 100%!important;
+}
+
+#content, #masthead, #footer-content{
+		max-width: 1366px;
+    margin: auto;
+	}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+
+a:hover,
+a:focus,
+a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+/*--------------------------------------------------------------
+## Branding
+----------------------------------------------------------------*/
+
+.site-branding p{
+	font-size: 15px;
+}
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+.site-header {
+    /*background-color: #ccc;*/
+    border-color: #080808;
+		display: flex;
+		align-items: center;
+}
+.site-title{
+	margin: 10px 0;
+}
+.main-navigation {
+	clear: both;
+	display: block;
+	float: right;;
+	width: 70%;
+}
+
+.main-navigation ul {
+	/*display: none;*/
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+	margin: 2em;
+	font-size: 1vw;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+#main-navigation {
+  position:fixed;
+  top:0;
+  z-index: 10000;
+  width:100vw;
+  margin-left:-7.5px!important
+}
+.nav-level-1, .nav-level-2 {
+  display:none;
+}
+
+/*--------------------------------------------------------------
+## FOOTER
+--------------------------------------------------------------*/
+
+footer{
+    background-color: #050505;
+    /*height: 70px;*/
+    overflow: hidden;
+		position: absolute!important;
+	  right: 0!important;
+	  bottom: 0!important;
+	  left: 0!important;
+	  padding: 1rem!important;
+	  text-align: center!important;
+}
+.footer .flex-container{
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex:1;
+    flex: 1;
+    align-items: center;
+    margin: 0;
+		list-style: none;
+}
+.footer-img{
+	-webkit-flex:1;
+    flex:1;
+    position: relative;
+    left: 0%;
+    height: 100%;
+    overflow: hidden;
+
+}
+ #footer-content{
+	  display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.another-menu{
+	-webkit-flex:5;
+    flex:5;
+}
+.another-menu ul {
+    display:flex;
+
+}
+.another-menu .menu-main-navigation-container{
+	width: 100%;
+	margin: auto;
+}
+.another-menu .menu-main-navigation-container ul#primary-menu{
+	margin: 0;
+	padding: 0;
+}
+.another-menu .menu-main-navigation-container ul#primary-menu li{
+	margin: 0 20px;
+	display: inline;
+}
+.another-menu .menu-main-navigation-container ul#primary-menu li a{
+    color: #fff;
+    font-size: 1vw;
+    padding-top: 1vw;
+    font-family: 'venticf-bold', sans-serif;
+    margin-bottom: 0;
+}
+
+.socialmedia{
+	-webkit-flex:5;
+    flex:5;
+    float:right;
+}
+.socialmedia ul{
+    display:flex;
+    -webkit-flex:1;
+    flex:1;
+    padding: 1vw;
+    float: right;
+}
+.socialmedia li a{
+    margin: 0.3em;
+    color:#fff;
+    padding: 0.0em 0.3em;
+    position: relative;
+    /*bottom: 10px;*/
+}
+.socialmedia ul li a i.fa {
+    /* margin-top: 0.3em; */
+    color: #fff;
+    border: 1px solid;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 0.6vw;
+}
+
+
+.socialmedia-img{
+  width:2vw;
+  height:2vw;
+}
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	/*margin: 1.5em 0 0;*/
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+
+/* ======================================================================= *\
+		MEDIA QUERY
+\* =======================================================================  */
+/* ###################################################### *\
+				1024px
+\* ###################################################### */
+
+@media(max-width:1023px){
+
+.main-navigation ul {
+	display: block;
+	float: right;
+	width: 100%;
+}
+.fa-bars{
+	font-size: 20px;
+	}
+ #footer-content{
+	 justify-content: center;
+ }
+ .socialmedia {
+     -webkit-flex: 0;
+     flex: 0;
+ 		float: none;
+ 	}
+.another-menu{
+	display: none
+}
+}
+/* ###################################################### *\
+				768px
+\* ###################################################### */
+@media (min-width: 769px){
+	.navbar-header button{
+		display: none;
+	}
+}
+@media(max-width:769px){
+	html, body {
+		overflow-x: hidden;
+	}
+	.site-title{
+		margin: 10px 0;
+	}
+	.main-navigation{
+		width: 35%;
+		position: absolute;
+		right: 0%;
+		top: 0%;
+		/*z-index: 9999;*/
+		/*text-align: right;*/
+		padding: 0;
+		display: flex;
+    flex-direction: column;
+		display: -webkit-flex; /* Safari */
+	 -webkit-flex-direction:column;
+	}
+	.main-navigation li {
+			float: none;
+			position: relative;
+			margin: 1em;
+			font-size: 2vw;
+			display: block;
+			/*width: 100%;*/
+			border-bottom: 1px dotted;
+	}
+	.navbar-header {
+    float: right;
+}
+	.navbar-toggle {
+    display: block;
+  }
+	.navbar-collapse.collapse {
+     display:none!important;
+     height: auto!important;
+     padding-bottom: 0;
+     overflow: visible!important;
+
+	}
+	.navbar-collapse.collapse.in {
+			display: block!important;
+			background: aliceblue;
+			width: 100%;
+			/*float: right;*/
+			border-bottom: 1px dotted;
+			padding-right: 10px;
+    	padding-left: 0;
+			right: 0%;
+    	position: relative;
+			/*top: 40px;*/
+			z-index: 9999;
+			transition-duration: 0.5s;
+	}
+	#navbar-header{
+		position: relative;
+		right: -7%;
+	}
+	/* safari */
+	.navbar-header button{
+		background: transparent;
+		border: none;
+		float: right;
+		outline:0;
+		margin-bottom: 12px;
+
+	}
+	.navbar-toggle{
+		 padding: 0;
+		 margin-top: 0;
+		 margin-right: 0;
+		 margin-bottom: 0;
+		 /*right: -7%;*/
+	}
+	.main-navigation ul {
+		padding-right: 10x;
+	}
+}
+/* ###################################################### *\
+				600px
+\* ###################################################### */
+@media(max-width:601px){
+	.cta-small{
+	width: 100%!important;
+	margin-bottom: 0!important;
+	}
+}
+/* ###################################################### *\
+				320px
+\* ###################################################### */
+.navbar-collapse.in{
+	/*right: -20%;*/
+}
+
+
+::-webkit-scrollbar
+{
+  width: 1px;  /* for vertical scrollbars */
+  /*height: 12px;*/ /* for horizontal scrollbars */*/
+}
+
+::-webkit-scrollbar-track
+{
+  background:transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.1);
+}
