@@ -43,6 +43,7 @@ admin.css
 *.min.js
 *.css.map
 min/
+optin-monster.css
 
 *~
 .DS_Store
